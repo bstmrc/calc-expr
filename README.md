@@ -13,6 +13,11 @@ Analizador Pratt construido en Go para el calculo de expresiones matemáticas si
 
 ## Instalación
 
+Esta primer versión es soportada por las siguientes plataformas y arquitecturas:
+
+- win32-x64
+- linux-x64
+
 ```bash
 npm install calc-expr
 
