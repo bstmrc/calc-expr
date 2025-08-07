@@ -1,0 +1,33 @@
+# Node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+
+# TypeScript
+dist/
+*.tsbuildinfo
+
+# IDEs
+.vscode/
+.idea/
+*.sw?
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Tests / coverage
+coverage/
+*.lcov
+
+# Logs
+*.log
+
+# Env vars
+.env
+.env.*
+
+# Optional: si usás playgrounds o archivos temporales
+*.tmp
+*.temp
+*.bak
