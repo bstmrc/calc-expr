@@ -1,0 +1,28 @@
+{
+  "name": "calc-expr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "ts-node-dev --respawn --transpile-only --exit-child test/eval.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node-dev": "^2.0.0",
+    "node-gyp": "^11.3.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [],
+  "author": "mfbasta",
+  "license": "MIT",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^8.5.0",
+    "pino": "^9.7.0"
+  }
+}
