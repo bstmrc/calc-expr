@@ -1,6 +1,7 @@
 import os from "os"
 import path from "path"
 import { libname } from "./utils/libnames.map"
+import bindings from "bindings";
 
 export class Binder {
   private static instance: Binder
@@ -29,9 +30,9 @@ export class Binder {
       throw new Error(`Unsupported platform: ${this.platform}`);
     }
 
-    const libPath = path.join(__dirname, "..", "addon", "libparser", `${this.platform}-${this.arch}`, this.libname);
+    const libPath = path.join(__dirname, "addon", "libparser", `${this.platform}-${this.arch}`, this.libname);
 
-    const addon = require("bindings")("evalExpr")
+    const addon = bindings({ bindings: "evalExpr", module_root: path.resolve(__dirname, "addon") });
     addon.load(libPath)
 
     return addon;
