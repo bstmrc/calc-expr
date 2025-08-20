@@ -1,7 +1,6 @@
 import os from "os"
-import path from "path"
+import path, { join } from "path"
 import { libname } from "./utils/libnames.map"
-import bindings from "bindings";
 
 export class Binder {
   private static instance: Binder
@@ -32,7 +31,9 @@ export class Binder {
 
     const libPath = path.join(__dirname, "addon", "libparser", `${this.platform}-${this.arch}`, this.libname);
 
-    const addon = bindings({ bindings: "evalExpr", module_root: path.resolve(__dirname, "addon") });
+    // const addon = bindings({ bindings: "evalExpr", module_root: path.resolve(__dirname, "addon") });
+    console.log(join(__dirname, '..', '..'))
+    const addon = require('node-gyp-build')(join(__dirname, '..', '..'))
     addon.load(libPath)
 
     return addon;
