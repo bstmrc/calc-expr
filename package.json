@@ -1,7 +1,11 @@
 {
   "name": "calc-expr",
-  "version": "1.0.0",
+  "version": "1.1.0-alpha",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bstmrc/calc-expr.git"
+  },
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "files": [
@@ -27,7 +31,7 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.0"
   },
-  "keywords": [],
+  "keywords": ["pratt", "go", "parser", "calc", "expression", "calculator", "math", "eval"],
   "author": "mfbasta",
   "license": "MIT",
   "dependencies": {

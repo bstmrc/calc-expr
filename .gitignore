@@ -31,3 +31,7 @@ coverage/
 *.tmp
 *.temp
 *.bak
+
+# own
+*.tgz
+build/
